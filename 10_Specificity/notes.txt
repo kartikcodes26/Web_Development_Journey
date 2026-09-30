@@ -1,0 +1,31 @@
+CSS SPECIFICITY — PRACTICAL CHEAT SHEET
+
+Priority (strongest → weakest):
+
+!important
+inline style
+#id
+.class / :hover / [attribute]
+element / ::before
+
+Main rules:
+1. More specific selector wins.
+2. ID > class > element.
+3. Multiple classes/selectors can make a selector more specific.
+4. If specificity is equal → the rule written LAST wins.
+5. Parent selectors don't automatically override a more specific child selector.
+6. Avoid IDs for normal styling; prefer classes.
+7. Avoid !important unless genuinely necessary.
+8. Usually don't calculate specificity numbers. Just think:
+   ID > CLASS > ELEMENT
+
+When CSS isn't working, check:
+1. Is the selector targeting the correct element?
+2. Is another selector more specific?
+3. If equal specificity, is my rule written earlier?
+4. Is a browser/library style overriding it?
+5. Did I use !important somewhere?
+
+MOST IMPORTANT:
+ID > CLASS > ELEMENT
+Same specificity → LAST RULE WINS

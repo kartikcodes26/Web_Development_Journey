@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            /* display: inline; inline element dont respect top padding and margin and also width */
+            display: inline-block;
+            padding: 45px;
+            margin: 50px;
+            background-color: cyan;
+            width: 150px;
+
+        }
+        .box1 {
+            /* display: none; Jagah ke saath bande ko hatao */
+            visibility: hidden; /* bande ko htao jagah ko rakho */
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "box box1">
+        This is a block element. It takes up the full width of its parent container and starts on a new line. But using display inline we can make it inline
+    </div>
+
+    <div class = "box box2">
+        This is block element 2. It takes up the full width of its parent container and starts on a new line. But using display inline we can make it inline
+    </div>
+
+</body>
+</html>

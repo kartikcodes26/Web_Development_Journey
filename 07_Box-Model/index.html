@@ -1,0 +1,43 @@
+<!--
+•	Margin — Space outside the element
+1.	It creates space around the element’s border.
+2.	Think of it as the gap between this element and other elements nearby.
+3.	Example: if a box has margin: 20px, it pushes other elements 20px away from it.
+
+•	Padding — Space inside the element
+1.	It creates space inside the element’s border, between the border and the element’s content.
+2.	Think of it as the inner cushion inside a box.
+3.	Example: if a box has padding: 20px, its content (like text) will have 20px space from the edges of the box.
+•	The total height and width will add the margin,border and padding with the given width and height value of content-if I don’ t use the boxsizing:borderbox
+•	But if I use it,then it will change the content width to such that the total width/height becomes the width/height I am providing. But in this case,I should notice that the margin will not be included .Because margin reflects on distances between elements
+•	Margin Collapse- Margins of two contents will overlap and the highest margin among those two will be used.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .div1{
+        margin: 10px;
+        background-color: yellow;
+        padding: 20px;
+        size: 50px;
+        border: 2px solid green;
+        height: 100px;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <div class = "div div1">
+        Simple Div Element
+    </div>
+</body>
+</html>
