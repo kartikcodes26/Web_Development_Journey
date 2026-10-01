@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: #121212; color: white;">
+    <h1> My Schedule </h1>
+    <ol class="schedule">
+        <li> DSA </li>
+        <li> Development </li>
+        <li> College Study </li>
+        <li> Writing Work </li>
+    </ol>
+
+    <script>
+        function additem(item) {
+            const li = document.createElement('li');
+            li.innerHTML = item;
+            document.querySelector('.schedule').appendChild(li);
+        }
+
+        additem("Django");
+
+        // inner html is not usually optimised
+        function addoptimised(item) {
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(item))
+            document.querySelector('.schedule').appendChild(li)
+        }
+
+        addoptimised("ML");
+
+        // Edit item
+        function edit(n, item) {
+            const li = document.createElement('li')
+            li.textContent = item
+            const toreplace = document.querySelector(`li:nth-child(${n})`)
+            toreplace.replaceWith(li)
+        }
+
+        edit(2, "Rust")
+
+        // Remove
+        function rem(n) {
+            const listele = document.querySelector(`li:nth-child(${n})`);
+            listele.remove();
+        }
+        rem(1)
+
+        // `li:nth-child(${n})`, js goes to its parent counts down and returns its nth element
+    </script>
+</body>
+</html>
