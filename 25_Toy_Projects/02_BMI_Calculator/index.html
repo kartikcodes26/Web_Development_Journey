@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 250px;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1> BMI Calculator </h1>
+    <form action="" method="post">
+        <label for = "Height"> Height in CM: </label>
+        <input type="text" id="Height" name = "Height" required>
+
+        <label for = "Weight"> Weight in KG: </label>
+        <input type="text" id="Weight" name = "Weight" required>
+
+        <button type = "submit"> Calculate BMI </button>
+
+        <div id = "results"></div>
+        <div id = "verdict"></div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
