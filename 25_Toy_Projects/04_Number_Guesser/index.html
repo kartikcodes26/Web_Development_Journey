@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Number Guesser</title>
+    </head>
+    <body>
+        <h1>Guess the number</h1>
+        <h2 class = 'tries'></h2>
+        <div>
+            <h2 class="header">Enter your guessed number :</h2>
+            <input type="number" name="guess" id="guess" required />
+
+            <button class="check">Check</button>
+        </div>
+        <div>
+            <h3 class="results"></h3>
+        </div>
+
+        <script>
+            let num = Math.floor(Math.random() * 10);
+
+            console.log(num)
+            let tries = 3;
+            let found = false;
+            
+            document.querySelector('.tries').textContent = `Tries : ${tries}`
+            button = document.querySelector(".check");
+            result = document.querySelector(".results");
+            guess = document.querySelector("#guess");
+
+            button.addEventListener("click", function () {
+                if(tries <= 0) {
+                    result.textContent = `The number was ${num}`
+                    return ;
+                }
+
+                tries--;
+                document.querySelector('.tries').textContent = `Tries : ${tries}`
+                const usernum = Number(guess.value);
+
+                if (usernum < num) {
+                    result.textContent = "Try Greater";
+                } else if (usernum > num) {
+                    result.textContent = "Try Smaller";
+                } else {
+                    result.textContent = "Congratulations! You found it 🎉";
+                    return ;
+                }
+            });
+        </script>
+    </body>
+</html>
