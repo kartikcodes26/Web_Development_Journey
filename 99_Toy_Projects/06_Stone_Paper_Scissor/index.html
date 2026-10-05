@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stone Paper Scissor Game</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .title {
+                text-align: center;
+                background-color: #121212;
+                height: 40px;
+                padding: 10px;
+                color: white;
+            }
+            .instructions {
+                text-align: center;
+            }
+            .instructions > h2 {
+                padding: 10px;
+            }
+            .choices {
+                text-align: center;
+            }
+            .choice {
+                margin: 10px;
+                display: inline-block;
+                align-items: center;
+                border: 1px solid black;
+                padding: 20px;
+                width: 100px;
+                background-color: bisque;
+                cursor: pointer;
+            }
+
+            .play {
+                background-color: cyan;
+            }
+
+            .userChoice {
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                font-size: 22px;
+            }
+
+            .results {
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                font-size: 22px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Stone, Paper and Scissor's Game</h1>
+        </div>
+
+        <div class="instructions">
+            <h2>The computer has decided his move</h2>
+            <h2>Play Your Move :</h2>
+        </div>
+
+        <div class="choices">
+            <span class="choice option" id="stone"> Stone </span>
+            <span class="choice option" id="paper"> Paper </span>
+            <span class="choice option" id="scissor"> Scissor </span>
+        </div>
+
+        <div class="choices">
+            <span class="choice play">Play</span>
+        </div>
+
+        <p class="userChoice">
+
+        </p>
+
+        <p class="results">
+
+        </p>
+
+        <script src="script.js"></script>
+    </body>
+</html>

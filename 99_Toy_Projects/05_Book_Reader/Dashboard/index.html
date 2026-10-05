@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to my Library</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .title {
+                text-align: center;
+                background-color: #121212;
+                height: 40px;
+                padding: 10px;
+                color: white;
+            }
+            .select {
+                text-align: center;
+                padding: 20px;
+            }
+
+            .books {
+                display: flex;
+                flex-direction: column;
+                gap: 20px; /* Adds space between the buttons */
+                align-items: center; /* Prevents buttons from stretching full width */
+            }
+
+            .book {
+                background-color: bisque;
+                border: solid 1px;
+                padding: 10px;
+                font-weight: bold;
+                cursor: pointer;
+
+                width: 250px; /* Sets a strict fixed width */
+                white-space: normal; /* Allows text to wrap onto new lines */
+                word-break: break-word; /* Prevents long single words from overflowing */
+                height: auto; /* Allows button height to expand naturally */
+
+                /* Smooth outline transition */
+                outline: 0px solid transparent;
+                transition: outline 0.1s ease-in-out;
+            }
+
+            .book:hover {
+                outline: 1px solid #121212;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Foxy's Book Library</h1>
+        </div>
+        <div class="select">
+            <h2>Select from a range of E-Books</h2>
+        </div>
+        <div class="books">
+            <button class="book">Atomic Habits</button>
+            <button class="book">A Tale of Two Cities</button>
+            <button class="book">The Little Prince</button>
+            <button class="book">The Alchemist</button>
+            <button class="book">
+                Harry Potter and the Philosopher's Stone
+            </button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

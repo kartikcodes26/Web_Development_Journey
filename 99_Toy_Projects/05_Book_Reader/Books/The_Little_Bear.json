@@ -1,0 +1,22 @@
+{
+    "id": "book_001",
+    "title": "The Little Bear",
+    "pages": [
+        {
+            "page": 1,
+            "text": [
+                "Once upon a time, Little Bear found a shiny key.",
+                "He was curious about what it could unlock.",
+                "He looked around and saw a small door in the tree."
+            ]
+        },
+        {
+            "page": 2,
+            "text": [
+                "Once upon a time, Little Bear found a shiny key.",
+                "He was curious about what it could unlock.",
+                "He looked around and saw a small door in the tree."
+            ]
+        }
+    ]
+}
