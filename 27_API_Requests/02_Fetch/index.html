@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fetch Basics</title>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 2xx Success -->
+                <tr>
+                    <td><strong>200</strong></td>
+                    <td><strong>OK</strong></td>
+                    <td>
+                        The request was successful and the server returned the
+                        requested data.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>201</strong></td>
+                    <td><strong>Created</strong></td>
+                    <td>
+                        The request succeeded and a new resource was
+                        successfully created.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>202</strong></td>
+                    <td><strong>Accepted</strong></td>
+                    <td>
+                        The request has been accepted for processing, but
+                        processing is not yet complete.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>204</strong></td>
+                    <td><strong>No Content</strong></td>
+                    <td>
+                        The request succeeded, but there is no data or content
+                        to send back in the response body.
+                    </td>
+                </tr>
+
+                <!-- 3xx Redirection -->
+                <tr>
+                    <td><strong>301</strong></td>
+                    <td><strong>Moved Permanently</strong></td>
+                    <td>
+                        The requested resource has been permanently moved to a
+                        new URL.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>304</strong></td>
+                    <td><strong>Not Modified</strong></td>
+                    <td>
+                        The cached version of the requested resource is still
+                        valid and has not changed.
+                    </td>
+                </tr>
+
+                <!-- 4xx Client Error -->
+                <tr>
+                    <td><strong>400</strong></td>
+                    <td><strong>Bad Request</strong></td>
+                    <td>
+                        The server cannot process the request due to a
+                        client-side error, like invalid syntax or data.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>401</strong></td>
+                    <td><strong>Unauthorized</strong></td>
+                    <td>
+                        The request requires authentication. The client must log
+                        in or provide credentials.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>403</strong></td>
+                    <td><strong>Forbidden</strong></td>
+                    <td>
+                        The client is authenticated but does not have permission
+                        to access the requested resource.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>404</strong></td>
+                    <td><strong>Not Found</strong></td>
+                    <td>
+                        The server cannot find the requested resource or
+                        endpoint.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>409</strong></td>
+                    <td><strong>Conflict</strong></td>
+                    <td>
+                        The request conflicts with the current state of the
+                        server resource (e.g., duplicate entries).
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>429</strong></td>
+                    <td><strong>Too Many Requests</strong></td>
+                    <td>
+                        The client has exceeded their rate limit and sent too
+                        many requests in a given timeframe.
+                    </td>
+                </tr>
+
+                <!-- 5xx Server Error -->
+                <tr>
+                    <td><strong>500</strong></td>
+                    <td><strong>Internal Server Error</strong></td>
+                    <td>
+                        The server encountered an unexpected error and could not
+                        complete the request.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>502</strong></td>
+                    <td><strong>Bad Gateway</strong></td>
+                    <td>
+                        The server received an invalid response from an upstream
+                        server while acting as a gateway or proxy.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>503</strong></td>
+                    <td><strong>Service Unavailable</strong></td>
+                    <td>
+                        The server is temporarily unable to handle the request,
+                        usually due to maintenance or overload.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>504</strong></td>
+                    <td><strong>Gateway Timeout</strong></td>
+                    <td>
+                        The server acting as a gateway or proxy did not receive
+                        a timely response from the upstream server.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="script.js"></script>
+    </body>
+</html>
