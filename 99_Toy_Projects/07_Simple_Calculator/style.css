@@ -1,12 +1,26 @@
 * {
-    border-sizing: border-box;
+    box-sizing: border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1 {
+    text-align: center;
+    color: rgba(38, 27, 27, 0.75);
 }
 
 body {
     padding: 0;
     margin: 0;
     background: linear-gradient(to right, cyan, green);
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+}
+
+button:focus {
+    outline: none;
 }
 
 .calculator-grid {
@@ -35,6 +49,7 @@ body {
 }
 
 .output {
+    border: 5px solid white;
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, .75);
     display: flex;

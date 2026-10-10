@@ -130,3 +130,34 @@ allClearButton.addEventListener("click", () => {
     calculator.allClear();
     calculator.updateDisplay();
 });
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key >= '0' && event.key <= '9') {
+        calculator.appendNumber(event.key);
+    }
+
+    if (event.key === '.') {
+        calculator.appendNumber('.');
+    }
+
+    if (['+', '-', '*', '/'].includes(event.key)) {
+        const operation = event.key === '/' ? '÷' : event.key;
+        calculator.chooseOperation(operation);
+    }
+
+    if (event.key === 'Enter' || event.key === '=') {
+        calculator.compute();
+    }
+
+    if (event.key === 'Backspace') {
+        calculator.delete();
+    }
+
+    if (event.key === 'Escape') {
+        calculator.allClear();
+    }
+
+    calculator.updateDisplay();
+});
+
