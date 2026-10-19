@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz App</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Nunito", sans-serif;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(163, 5, 255);
+            }
+
+            body.correct {
+                background-color: lightgreen;
+            }
+            body.wrong {
+                background-color: lightcoral;
+            }
+
+            .container {
+                background-color: aliceblue;
+                width: 70%;
+                max-width: 80%;
+                border-radius: 6px;
+                padding: 12px;
+                box-shadow: 0 0 10px 2px; /* x-off, y-off, blur, spread*/
+            }
+
+            .Options {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                gap: 8px;
+                margin: 20px 0px; /* vertical, horizontal*/
+            }
+
+            .btn {
+                background-color: #f8f9fa;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+                padding: 7px 10px;
+                outline: none;
+            }
+
+            .btn:hover {
+                background-color: #f1f3f5;
+                border-color: #ced4da;
+            }
+
+            .btn.correct {
+                background-color: greenyellow;
+            }
+
+            .btn.wrong {
+                background-color: lightsalmon;
+            }
+
+            .start-btn, .next-btn {
+                font-size: 1rem;
+                font-weight: bold;
+                padding: 10px 20px;
+                
+            }
+
+            .Controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="question">What is the concept of knocking</div>
+
+            <div class="Options">
+                <button class="btn correct">Option 1</button>
+                <button class="btn wrong">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+            </div>
+            <div class="Controls">
+                <div >
+                    <button class="btn start-btn">Start</button>
+                </div>
+
+                <div>
+                    <button class="btn start-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
