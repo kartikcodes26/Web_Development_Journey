@@ -59,11 +59,12 @@
                 border-radius: 5px;
                 padding: 7px 10px;
                 outline: none;
+                cursor: pointer;
             }
 
             .btn:hover {
-                background-color: #f1f3f5;
-                border-color: #ced4da;
+                background-color: lightgrey;
+                border-color: grey;
             }
 
             .btn.correct {
@@ -78,7 +79,7 @@
                 font-size: 1rem;
                 font-weight: bold;
                 padding: 10px 20px;
-                
+
             }
 
             .Controls {
@@ -86,13 +87,17 @@
                 justify-content: center;
                 align-items: center;
             }
+
+            .hide {
+                display: none;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="question">What is the concept of knocking</div>
+            <div class="question hide">What is the concept of knocking</div>
 
-            <div class="Options">
+            <div class="Options hide">
                 <button class="btn correct">Option 1</button>
                 <button class="btn wrong">Option 2</button>
                 <button class="btn">Option 3</button>
@@ -104,9 +109,11 @@
                 </div>
 
                 <div>
-                    <button class="btn start-btn">Next</button>
+                    <button class="btn next-btn hide">Next</button>
                 </div>
             </div>
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
