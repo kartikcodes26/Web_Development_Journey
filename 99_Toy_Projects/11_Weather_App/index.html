@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #B3E5FF;
+            color: #002133;
+        }
+
+        .blurred {
+            filter: blur(3px);
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            border-right: 2px solid #002133;
+            padding: .5rem;
+            margin: .5rem;
+        }
+
+        .weather-icon {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
+
+        .weather-icon.large {
+            height: 80px;
+            width: 80px;
+            object-fit: contain;
+        }
+
+        .current-temperature {
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+
+        .header-right {
+            width: 50%;
+            display: grid;
+            justify-content: space-around;
+            align-items: center;
+
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(3, auto);
+
+            gap: .5rem;
+        }
+
+        .info-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .label {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.6rem;
+        }
+
+        .value-sub-info {
+            font-weight: lighter;
+            font-size: 0.75rem;
+        }
+
+        .day-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 75px);
+            gap: .5rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .day-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #002133;
+            border-radius: 0.25rem;
+            justify-content: center;
+            align-items: center;
+            padding: 0.25rem;
+        }
+
+        .day-card-day {
+            font-size: 0.75rem;
+            color: #0B466C;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class = "header">
+        <div class = "header-left">
+            <img class = "weather-icon large"src="icons/sun.svg" alt="" data-current-icon>
+            <div class = "current-temperature">
+                <span data-current-temp>31</span>&deg;
+            </div>
+        </div>
+        <div class = "header-right">
+            <div class = "info-group">
+                <div class = "label"> High </div>
+                <div data-current-high><span>31</span>&deg</div>
+            </div>
+            <div class = "info-group">
+                <div class = "label"> FL High </div>
+                <div data-current-FlHigh><span>31</span>&deg</div>
+            </div>
+            <div class = "info-group">
+                <div class = "label"> Wind </div>
+                <div data-current-wind><span> 9 </span> <span class = "value-sub-info"> mph </span></div>
+            </div>
+            <div class = "info-group">
+                <div class = "label"> Low </div>
+                <div data-current-low><span>31</span>&deg</div>
+            </div>
+            <div class = "info-group">
+                <div class = "label"> FL Low </div>
+                <div data-current-FlLow><span>31</span>&deg</div>
+            </div>
+            <div class = "info-group">
+                <div class = "label"> precip </div>
+                <div data-current-precip><span>0.1</span> <span class = "value-sub-info">in</span> </div>
+            </div>
+        </div>
+    </header>
+
+    <section class = "day-section" data-day-section>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+        <div class = "day-card">
+            <img src="icons/cloud.svg" alt="" class="weather-icon">
+            <div class = 'day-card-day'> Monday </div>
+            <div> 32&deg;</div>
+        </div>
+    </section>
+</body>
+</html>
