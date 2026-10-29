@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utility.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+
+        .left {
+            width: 25vw;
+        }
+        .right {
+            width: 75vw;
+        }
+        .home {
+            padding: 10px;
+        }
+        .home ul li {
+            list-style: none;
+            width: 14px;
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1">
+                <img class = "invert" src="img/logo.svg" alt="logo">
+                <ul>
+                    <li> <img class = "invert" src="img/home.svg" alt="home"> Home</li>
+                    <li> <img  class = "invert" src="img/search.svg" alt="search"> Search </li>
+                </ul>
+            </div>
+
+            <div class="library"></div>
+        </div>
+        <div class="right">wev</div>
+    </div>
+
+</body>
+</html>
