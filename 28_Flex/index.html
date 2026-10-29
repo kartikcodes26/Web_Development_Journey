@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .main {
+                border: 2px solid black;
+                display: flex;
+                justify-content: space-evenly; /* main (horizontal) axis*/
+                /* justify-content: flex-end;
+        justify-content: flex-start; */
+                align-items: space-evenly;
+                min-height: 300px;
+                flex-direction: row;
+                gap: 30px;
+                flex-wrap: wrap;
+                align-content: space-evenly;
+                /*
+        flex direction row makex main axis horizontal
+        flex direction column makes main axis vertical
+        */
+            }
+            .main > div {
+                background-color: yellow;
+                border: 1px solid black;
+                height: 100px;
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div>Hello</div>
+            <div>Kartik</div>
+            <div>Foxy</div>
+            <div>Hello</div>
+            <div>Kartik</div>
+            <div>Foxy</div>
+        </div>
+    </body>
+</html>
